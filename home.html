@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>okome onigiriのサイト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
   <style>
     header {
       position: fixed;
@@ -30,6 +29,16 @@
     .header-logo {
       width: 56px;
       height: 56px;
+      object-fit: contain;
+    }
+    .header-logo_youtube {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .header-logo_instagram {
+      width: 32px;
+      height: 32px;
       object-fit: contain;
     }
     .header-title {
@@ -66,7 +75,7 @@
       padding-top: 120px; /* headerの高さに合わせて調整 */
     }
     main {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 40px auto 0 auto;
       padding: 0 16px;
     }
@@ -76,13 +85,31 @@
       font-size: 0.9rem;
       margin: 40px 0 16px 0;
     }
+    small-note {
+      font-size: 0.75em;
+      color: #888;
+      margin-left: 0.5em;
+      vertical-align: super;
+    }
+    .okomeonigiri-logo-1 {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
   </style>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <img src="image/okomeonigiri_first.jpg" alt="ロゴ" class="header-logo">
+      <img src="images/okomeonigiri_first.jpg" alt="ロゴ" class="header-logo">
       <h1 class="header-title">okome onigiri のサイト</h1>
+      <a href="https://www.youtube.com/@okomeonigiri" target="_blank" rel="noopener noreferrer">
+        <img src="images/youtube_icon.png" alt="YouTubeアイコン" class="header-logo_youtube">
+      </a>
+      <a href="https://www.instagram.com/onigiri10.24?igsh=c2VnOWxhcjcwNjQ0&utm_source=qr" target="_blank" rel="noopener noreferrer">
+        <img src="images/instagram_icon.png" alt="Instagramアイコン" class="header-logo_instagram">
+      </a>
     </div>
     <nav>
       <ul>
@@ -94,30 +121,30 @@
   </header>
   <main>
     <section id="home">
-      <h2>okome onigiri のサイトです。</h2>
+      <h2>okome onigiri のサイトへようこそ！。</h2>
       <p>
-        サーバーは
-        <a href="https://www.star.ne.jp">スターレンタルサーバ</a>
-        Freeプランを使っています。<br>
-        コードを書く時は
-        <a href="https://html.cafe">html cafe</a>
-        を使っています。
+      このサイトにはまだ何もありませんが、今後色々追加する予定です<br>
+      サイトはHTML、CSSで作成されています。<br>
+      <small-note>JavaScriptとかpythonとか使いたいなぁ…</small-note><br>
       </p>
     </section>
     <section id="about">
-      <h2>okome onigiri について</h2>
+      <h2>okome onigiri について</h2><br>
+      <img src="images/okomeonigiri_first.jpg" alt="okome onigiriの写真" class="okomeonigiri-logo-1">
       <p>
         2011年生まれ、現在中学2年生<br>
-        プログラミング・機械系が好きです
+        プログラミング・機械系が好きです<br>
+        c/cpp HTML CSS JS などを学んでいます<small><br>
       </p>
     </section>
     <section id="contact">
       <h2>お問い合わせ</h2>
       <p>
-        ご質問・ご連絡はSNSやメールでどうぞ。
       </p>
     </section>
   </main>
   <footer class="site-footer">
     <small>&copy; 2025 okome onigiri</small>
   </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #fff;
+      text-align: center;
+      border-top: 2px solid #00acc1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      padding: 20px 0 12px 0;
+      margin: 0;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+    .header-logo_youtube {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .header-logo_instagram {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .header-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #222;
+      letter-spacing: 0.1em;
+      margin: 0;
+    }
+    nav {
+      margin-top: 8px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-flex;
+      gap: 32px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #00acc1;
+    }

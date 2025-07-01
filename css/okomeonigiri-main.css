@@ -17,3 +17,25 @@ small-note {
     margin-left: 0.5em;
     vertical-align: super;
 }
+.article-preview {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  width: 320px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+.preview-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.article-preview h3 {
+  margin: 8px 0 4px 0;
+  font-size: 1.1rem;
+}
+.article-preview p {
+  color: #555;
+  font-size: 0.95rem;
+}

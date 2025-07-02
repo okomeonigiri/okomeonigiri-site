@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="css/okomeonigiri-main.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
+  <script src="script/first-content.js" defer></script>
   <title>okome onigiriのサイト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -17,7 +18,15 @@
       width: 100%;         /* 横幅 */
       height: 100px;        /* 高さ */
       background: #535353;  /* 背景色 */
-}
+    }
+    .number {
+      width: 75px;
+      height: 30px;
+      padding-top: 5px;
+      text-align: center;
+      background-color: rgb(223, 153, 2);
+      border-radius: 12px; /* ← ここを追加 */
+    }
 
   </style>
 </head>
@@ -42,11 +51,16 @@
     </nav>
   </header>
   <main>
-    <h1>First content Blog test</h1>
-    <small-note>普通にテストって書けよ...</small-note>
-    <p>
-
-    </p>
+    <h1>First content of Blog test</h1>
+    <small-note>普通にテストって書けよ...</small-note><br><br>
+    <h2>ボタン</h2>
+      <button class="number" id="number" onclick="countUp()">0</button>
+      <br>
+      <p>
+        ボタンを押すと押した回数をただただカウントするやつです<br>
+        JSのサンプルによく使われてるやつ<br>
+        JS自体はたったの五行だけですw
+      </p>
   </main>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="site-footer">

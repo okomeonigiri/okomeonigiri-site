@@ -25,7 +25,8 @@
       padding-top: 5px;
       text-align: center;
       background-color: rgb(223, 153, 2);
-      border-radius: 12px; /* ← ここを追加 */
+      border-radius: 12px; 
+      color:blue;
     }
 
   </style>
@@ -61,6 +62,17 @@
         JSのサンプルによく使われてるやつ<br>
         JS自体はたったの五行だけですw
       </p>
+      <pre>JS
+        <code>
+    let count=0;
+    function countUp(){
+      count++;
+      document.getElementById("number").textContent=count;
+    }
+      </code><br>HTML
+    <code>
+       &lt;button class="number" id="number" onclick="countUp()"&gt;0&lt;/button&gt;
+    </code></pre>
   </main>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="site-footer">

@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="css/okomeonigiri-main.css">
   <link rel="stylesheet" href="css/header-minecraft.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/useful.css">
   <title>okome onigiriのサイト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -17,8 +18,15 @@
       width: 100%;         /* 横幅 */
       height: 100px;        /* 高さ */
       background: #535353;  /* 背景色 */
-}
-
+    }
+    .server-introduction{ /*目に優しいオレンジ系の背景(少し濃いめ)　角に丸みを帯びた*/
+      background: #e4c073;
+      border-radius: 8px;
+    }
+    .server-introduction serverTitle{ /*目に優しいオレンジ系の背景(少し濃いめ)　角に丸みを帯びた*/
+      background: #ffcd60;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -29,13 +37,21 @@
     </div>
     <nav>
       <ul>
-        <li><a href="">このサーバーについて</a></li>
-        <li><a href="">ルール</a></li>
-        <li><a href="">入り方</a></li>
+        <li><a href="" class="text-white">このサーバーについて</a></li>
+        <li><a href="" class="text-white">ルール</a></li>
+        <li><a href="" class="text-white">入り方</a></li>
       </ul>
     </nav>
   </header>
   <main>
+    <h1>okomeonigiri SMP<br>公式サイトへようこそ！</h1>
+    <section class="about">
+      <h2>このサーバーについて</h2>
+      <p>okomeonigiri SMP はokomeonigiri が主催する バニラSMP鯖です。</p>
+      <div class="server-introduction">
+        <serverTitle><h3>okomeonigiri SMP</h3></serverTitle>
+        <h4>サーバーの特徴</h4>
+      </div>
   </main>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="site-footer">

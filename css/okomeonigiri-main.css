@@ -39,3 +39,15 @@ small-note {
   color: #555;
   font-size: 0.95rem;
 }
+
+/* コードボックス用のスタイル例 */
+pre code {
+  display: block;
+  background: #222;
+  color: #f8f8f2;
+  padding: 1em;
+  border-radius: 8px;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1em;
+  overflow-x: auto;
+}

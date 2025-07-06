@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <script src="script/first-content.js" defer></script>
-  <title>okome onigiriのサイト</title>
+  <title>first-content - okomeonigiri</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     .okomeonigiri-logo-1 {
@@ -25,7 +25,8 @@
       padding-top: 5px;
       text-align: center;
       background-color: rgb(223, 153, 2);
-      border-radius: 12px; /* ← ここを追加 */
+      border-radius: 12px; 
+      color:blue;
     }
 
   </style>
@@ -61,6 +62,21 @@
         JSのサンプルによく使われてるやつ<br>
         JS自体はたったの五行だけですw
       </p>
+      <pre>JS
+        <code>
+    let count=0;
+    function countUp(){
+      count++;
+      document.getElementById("number").textContent=count;
+    }
+      </code><br>HTML
+    <code>
+    〜省略〜
+
+    &lt;button class="number" id="number" onclick="countUp()"&gt;0&lt;/button&gt;
+
+    〜省略〜
+    </code></pre>
   </main>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="site-footer">

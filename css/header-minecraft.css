@@ -4,11 +4,15 @@ header {
       left: 0;
       width: 100%;
       z-index: 1000;
+      height: 90px;
       background-color: #fff;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
       padding: 20px 0 12px 0;
       margin: 0;
+      background-image: url(../images/header-background.png);
+
+      background-position: center;
     }
     .header-content {
       display: flex;
@@ -17,6 +21,9 @@ header {
       gap: 16px;
       max-width: 900px;
       margin: 0 auto;
+    }
+    .header-content h1{
+      color:#fff;
     }
     .header-logo {
       width: 56px;

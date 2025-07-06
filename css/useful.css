@@ -1,0 +1,24 @@
+/* 基本の色名とその意味 */
+
+.white    { background-color: white; }      /* 白 */
+.black    { background-color: black; }      /* 黒 */
+.red      { background-color: red; }        /* 赤 */
+.green    { background-color: green; }      /* 緑 */
+.blue     { background-color: blue; }       /* 青 */
+.yellow   { background-color: yellow; }     /* 黄 */
+.orange   { background-color: orange; }     /* オレンジ */
+.purple   { background-color: purple; }     /* 紫 */
+.gray     { background-color: gray; }       /* 灰色 */
+.brown    { background-color: brown; }      /* 茶色 */
+
+/* 文字色バージョン */
+.text-white  { color: white; }
+.text-black  { color: black; }
+.text-red    { color: red; }
+.text-green  { color: green; }
+.text-blue   { color: blue; }
+.text-yellow { color: yellow; }
+.text-orange { color: orange; }
+.text-purple { color: purple; }
+.text-gray   { color: gray; }
+.text-brown  { color: brown; }

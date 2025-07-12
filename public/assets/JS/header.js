@@ -1,6 +1,6 @@
 async function importHeader() {
   let html = '';
-  let res = await fetch('../components/header.html');
+  let res = await fetch('/components/header.html');
   if (!res.ok) {
     res = await fetch('/public/components/header.html');
     if (!res.ok) {

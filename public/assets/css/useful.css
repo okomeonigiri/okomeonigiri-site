@@ -1,5 +1,4 @@
-/* 基本の色名とその意味 */
-
+/* 背景色たち */
 .white    { background-color: white; }      /* 白 */
 .black    { background-color: black; }      /* 黒 */
 .red      { background-color: red; }        /* 赤 */
@@ -11,7 +10,7 @@
 .gray     { background-color: gray; }       /* 灰色 */
 .brown    { background-color: brown; }      /* 茶色 */
 
-/* 文字色バージョン */
+/* 文字色たち */
 .text-white  { color: white; }
 .text-black  { color: black; }
 .text-red    { color: red; }

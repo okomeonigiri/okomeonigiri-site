@@ -1,5 +1,5 @@
 async function importHeader() {
-  const res = await fetch('../header.html');//res(response)にheader.htmlの内容を取得
+  const res = await fetch('/public/components/header.html');//res(response)にheader.htmlの内容を取得
   const html = await res.text();//htmlにheader.htmlの内容をテキスト(html)として格納
   document.getElementById('header').innerHTML = html;//IDがheaderの要素の中にhtmlを挿入
 }

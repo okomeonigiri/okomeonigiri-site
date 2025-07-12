@@ -59,3 +59,12 @@ header {
     nav a:hover {
       color: #00acc1;
     }
+    .select-page {
+      display: inline-block;
+      position: relative;
+      margin-left: 16px;
+      background-color:  #dddddd;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }

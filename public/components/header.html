@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="assets/css/header.css">
+<link rel="stylesheet" href="assets/css/useful.css">
 <header>
 <div class="header-content">
     <img src="assets/images/okomeonigiri_first.jpg" alt="ロゴ" class="header-logo">
@@ -15,6 +16,13 @@
     <li><a href="home.html">HOME</a></li>
     <li><a href="about.html">about</a></li>
     <li><a href="contact.html">contact</a></li>
-    </ul>
+    <span class="select-page">
+    <span>ページ移動</span>
+        <select id="header-select">
+            <option></option>
+            <option value="minecraft/okomeonigiri_server.html">Minecraftサーバー</option>
+        </select>
+        <button onclick="location.href=document.getElementById('header-select').value">移動</button>
+    </span>
 </nav>
 </header>

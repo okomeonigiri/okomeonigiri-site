@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Supabase Test</title>
+</head>
+<body>
+  <h1>Supabase テスト</h1>
+  <button onclick="insertUser()">ユーザー追加</button>
+  <button onclick="readUsers()">ユーザー取得</button>
+  <pre id="output"></pre>
+
+  <script type="module">
+    import { createClient } from '@supabase/supabase-js'
+
+    const supabaseUrl = 'https://aqgxciyrjqemjiwdiwxv.supabase.co'
+    const supabaseKey = process.env.SUPABASE_KEY
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
+    // 書き込み
+    async function insertUser() {
+      const { data, error } = await supabase
+        .from('users')
+        .insert([{ name: 'おにぎり', email: 'onigiri@example.com' }])
+
+      document.getElementById('output').textContent = 
+        error ? 'エラー: ' + error.message : '追加成功: ' + JSON.stringify(data, null, 2)
+    }
+
+    // 読み取り
+    async function readUsers() {
+      const { data, error } = await supabase
+        .from('users')
+        .select('*')
+
+      document.getElementById('output').textContent = 
+        error ? 'エラー: ' + error.message : 'データ取得: ' + JSON.stringify(data, null, 2)
+    }
+  </script>
+</body>
+</html>

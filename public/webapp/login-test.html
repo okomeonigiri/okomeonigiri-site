@@ -2,9 +2,16 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Supabase Test</title>
-    <script type="module">
-    import { createClient } from '@supabase/supabase-js'
+  <title>Supabase Todos</title>
+</head>
+<body>
+  <h1>サーバー テスト</h1>
+  <button onclick="insertUser()">タスク追加</button>
+  <button onclick="readUsers()">タスク取得</button>
+  <pre id="output"></pre>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
     const supabaseUrl = 'https://aqgxciyrjqemjiwdiwxv.supabase.co'
     const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFxZ3hjaXlyanFlbWppd2Rpd3h2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI5Mjk0NDQsImV4cCI6MjA2ODUwNTQ0NH0.wJpWK_wAJ22GGRfE2YrTmAdmy-k83hdHhRDkEwSkDVY'
@@ -29,12 +36,9 @@
       document.getElementById('output').textContent =
         error ? 'エラー: ' + error.message : 'データ取得: ' + JSON.stringify(data, null, 2)
     }
+    window.insertUser = insertUser
+    window.readUsers = readUsers
   </script>
-</head>
-<body>
-  <h1>Supabase テスト</h1>
-  <button onclick="insertUser()">ユーザー追加</button>
-  <button onclick="readUsers()">ユーザー取得</button>
-  <pre id="output"></pre>
 </body>
 </html>
+

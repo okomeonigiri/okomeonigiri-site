@@ -3,18 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Supabase Test</title>
-</head>
-<body>
-  <h1>Supabase テスト</h1>
-  <button onclick="insertUser()">ユーザー追加</button>
-  <button onclick="readUsers()">ユーザー取得</button>
-  <pre id="output"></pre>
-
-  <script type="module">
+    <script type="module">
     import { createClient } from '@supabase/supabase-js'
 
     const supabaseUrl = 'https://aqgxciyrjqemjiwdiwxv.supabase.co'
-    const supabaseKey = process.env.SUPABASE_KEY
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFxZ3hjaXlyanFlbWppd2Rpd3h2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI5Mjk0NDQsImV4cCI6MjA2ODUwNTQ0NH0.wJpWK_wAJ22GGRfE2YrTmAdmy-k83hdHhRDkEwSkDVY'
     const supabase = createClient(supabaseUrl, supabaseKey)
 
     // 書き込み
@@ -23,7 +16,7 @@
         .from('users')
         .insert([{ name: 'おにぎり', email: 'onigiri@example.com' }])
 
-      document.getElementById('output').textContent = 
+      document.getElementById('output').textContent =
         error ? 'エラー: ' + error.message : '追加成功: ' + JSON.stringify(data, null, 2)
     }
 
@@ -33,9 +26,15 @@
         .from('users')
         .select('*')
 
-      document.getElementById('output').textContent = 
+      document.getElementById('output').textContent =
         error ? 'エラー: ' + error.message : 'データ取得: ' + JSON.stringify(data, null, 2)
     }
   </script>
+</head>
+<body>
+  <h1>Supabase テスト</h1>
+  <button onclick="insertUser()">ユーザー追加</button>
+  <button onclick="readUsers()">ユーザー取得</button>
+  <pre id="output"></pre>
 </body>
 </html>

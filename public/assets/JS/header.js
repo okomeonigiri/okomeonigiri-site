@@ -32,6 +32,7 @@ function switchHeader(){
       headerTag.classList.remove('visible-header');
       headerTag.classList.add('hide-header');
     }
+    document.body.style.paddingTop = '0px';
     isHeader = 0;
   }else{
     headerDiv.classList.remove('hide');
@@ -40,8 +41,8 @@ function switchHeader(){
       headerTag.classList.remove('hide-header');
       headerTag.classList.add('visible-header');
     }
+    document.body.style.paddingTop = '200px';
     isHeader = 1;
   }
-  document.body.style.paddingTop = isHeader ? '200px' : '0';
 }
 // style.displayでヘッダー表示/非表示を切り替える形式

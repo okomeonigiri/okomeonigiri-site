@@ -24,17 +24,24 @@ if (fileName !== 'header.html') {
 function switchHeader(){
   const headerDiv = document.querySelector('.header');
   const headerSwitchButton = document.querySelector('.header-switch');
+  const headerTag = document.querySelector('header');
   if(isHeader){
-    headerDiv.style.display = 'none';
-    headerSwitchButton.style.display = 'block';
-    document.body.style.paddingTop = '0';
-    isHeader = 0;
+    headerDiv.classList.add('hide');
     headerSwitchButton.textContent = 'ヘッダーを表示';
+    if(headerTag){
+      headerTag.classList.remove('visible-header');
+      headerTag.classList.add('hide-header');
+    }
+    isHeader = 0;
   }else{
-    headerDiv.style.display = 'block';
-    document.body.style.paddingTop = '200px';
-    isHeader = 1;
+    headerDiv.classList.remove('hide');
     headerSwitchButton.textContent = 'ヘッダーを非表示';
+    if(headerTag){
+      headerTag.classList.remove('hide-header');
+      headerTag.classList.add('visible-header');
+    }
+    isHeader = 1;
   }
+  document.body.style.paddingTop = isHeader ? '200px' : '0';
 }
 // style.displayでヘッダー表示/非表示を切り替える形式

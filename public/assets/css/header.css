@@ -1,4 +1,5 @@
-header {
+    header {
+      padding-top: 5px;
       position: fixed;
       top: 0;
       left: 0;
@@ -34,7 +35,7 @@ header {
       margin-left: 5px;
     }
     .header-title {
-      font-size: clamp(0.2rem, 6vw, 1.7rem);
+      font-size: clamp(0.2rem, vw, 1.7rem);
       font-weight: bold;
       color: #222;
       letter-spacing: 0.1em;
@@ -89,3 +90,27 @@ header {
       border: none;
       color: black;
     }
+    .hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-120%);
+  transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+}
+.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+  transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+}
+.hide-header {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-100px);
+  transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+}
+.visible-header {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+  transition: transform 0.4s, opacity 0.4s, visibility 0.4s;
+}

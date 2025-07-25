@@ -7,7 +7,6 @@ header {
       background-color: #f0f0f0;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-      box-sizing: border-box;
     }
     .header-content {
       display: flex;
@@ -21,6 +20,7 @@ header {
       width: 56px;
       height: 56px;
       object-fit: contain;
+      margin-left: 5px;
     }
     .header-logo_youtube {
       width: 32px;
@@ -31,6 +31,7 @@ header {
       width: 32px;
       height: 32px;
       object-fit: contain;
+      margin-left: 5px;
     }
     .header-title {
       font-size: 1.6rem;
@@ -63,6 +64,7 @@ header {
       position: relative;
       margin-left: 16px;
       margin-right: 16px;
+      margin-top: 5px;
       background-color:  #dddddd;
       padding: 4px 8px 4px 8px;
       border-radius: 4px;
@@ -81,7 +83,7 @@ header {
       padding-top: 20px;
       padding-bottom: 6px;
       margin-right: 16px;
-      border-radius: 8px;
+      border-radius: 0 0 8px 8px;
       border: none;
       color: black;
     }

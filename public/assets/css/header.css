@@ -4,7 +4,7 @@ header {
       left: 0;
       width: 100%;
       z-index: 1000;
-      background-color: #fafafa;
+      background-color: #f0f0f0;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
       padding: 20px 0 12px 0;
@@ -71,7 +71,7 @@ header {
     }
 
     .header-switch {
-      background-color: #fafafa;
+      background-color: #f0f0f0;
       position: fixed;
       display: flex;
       justify-content: flex-end;

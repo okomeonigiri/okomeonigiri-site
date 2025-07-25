@@ -34,7 +34,7 @@ header {
       margin-left: 5px;
     }
     .header-title {
-      font-size: clamp(0.8rem, 4vw, 1.6rem);
+      font-size: clamp(0.2rem, 6vw, 1.7rem);
       font-weight: bold;
       color: #222;
       letter-spacing: 0.1em;

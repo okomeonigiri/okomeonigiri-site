@@ -34,11 +34,13 @@ header {
       margin-left: 5px;
     }
     .header-title {
-      font-size: 1.6rem;
+      font-size: clamp(1.1rem, 4vw, 1.6rem);
       font-weight: bold;
       color: #222;
       letter-spacing: 0.1em;
       margin: 0;
+      word-break: break-word;
+      white-space: normal;
     }
     nav {
       margin-top: 8px;

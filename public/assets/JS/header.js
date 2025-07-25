@@ -34,7 +34,7 @@ function switchHeader(){
     headerDiv.style.display = 'block';
     document.body.style.paddingTop = '200px';
     isHeader = 1;
-    headerSwitchButton.textContent = 'ヘッダーを非表示'; 
+    headerSwitchButton.textContent = 'ヘッダーを非表示';
   }
 }
 // style.displayでヘッダー表示/非表示を切り替える形式

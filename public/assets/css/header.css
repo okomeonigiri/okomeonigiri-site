@@ -63,21 +63,25 @@ header {
       display: inline-block;
       position: relative;
       margin-left: 16px;
+      margin-right: 16px;
       background-color:  #dddddd;
-      padding: 4px 8px;
+      padding: 4px 8px 4px 8px;
       border-radius: 4px;
       font-size: 0.85rem;
     }
 
     .header-switch {
-      background-color:  #dddddd;
+      background-color: #fafafa;
       position: fixed;
-      display:flex;
+      display: flex;
       justify-content: flex-end;
       right: 0;
-      z-index: 1000;
+      z-index: 999;
       padding-left: 10px;
       padding-right: 10px;
-      padding-top: 3px;
+      padding-top: 5px;
       padding-bottom: 3px;
+      margin-right: 16px;
+      border-radius: 8px;
+      border: none;
     }

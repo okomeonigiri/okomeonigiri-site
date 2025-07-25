@@ -1,96 +1,96 @@
-    header {
-      padding-top: 5px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: #f0f0f0;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    }
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .header-logo {
-      width: 56px;
-      height: 56px;
-      object-fit: contain;
-      margin-left: 5px;
-    }
-    .header-logo_youtube {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-    }
-    .header-logo_instagram {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      margin-left: 5px;
-    }
-    .header-title {
-      font-size: clamp(0.2rem, vw, 1.7rem);
-      font-weight: bold;
-      color: #222;
-      letter-spacing: 0.1em;
-      margin: 0;
-      word-break: break-word;
-      white-space: normal;
-    }
-    nav {
-      margin-top: 8px;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: inline-flex;
-      gap: 32px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1rem;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #00acc1;
-    }
-    .select-page {
-      display: inline-block;
-      position: relative;
-      margin-left: 16px;
-      margin-right: 16px;
-      margin-top: 5px;
-      background-color:  #dddddd;
-      padding: 4px 8px 4px 8px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
+header {
+  padding-top: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.header-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-left: 5px;
+}
+.header-logo_youtube {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.header-logo_instagram {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-left: 5px;
+}
+.header-title {
+  font-size: clamp(0.2rem, vw, 1.7rem);
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 0.1em;
+  margin: 0;
+  word-break: break-word;
+  white-space: normal;
+}
+nav {
+  margin-top: 8px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 32px;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #00acc1;
+}
+.select-page {
+  display: inline-block;
+  position: relative;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 5px;
+  background-color:  #dddddd;
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
 
-    .header-switch {
-      background-color: #f0f0f0;
-      position: fixed;
-      display: flex;
-      justify-content: flex-end;
-      right: 0;
-      z-index: 1001;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 20px;
-      padding-bottom: 6px;
-      margin-right: 16px;
-      border-radius: 0 0 8px 8px;
-      border: none;
-      color: black;
-    }
-    .hide {
+.header-switch {
+  background-color: #f0f0f0;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+  z-index: 1001;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 6px;
+  margin-right: 16px;
+  border-radius: 0 0 8px 8px;
+  border: none;
+  color: black;
+}
+.hide {
   opacity: 0 !important;
   visibility: hidden !important;
   transform: translateY(-120%);

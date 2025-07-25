@@ -68,3 +68,28 @@ header {
       border-radius: 4px;
       font-size: 0.85rem;
     }
+
+    .header-switch{
+      background-color:  #dddddd;
+      position: fixed;
+      display:flex;
+      justify-content: flex-end;
+      right: 0;
+      z-index: 1000;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+    .header-switch {
+      position: fixed;
+      right: 16px;
+      z-index: 1100;
+      transition: top 0.3s;
+    }
+    .header-switch.header-visible {
+      top: calc(56px + 20px + 12px); /* ヘッダーの高さ+padding分 */
+    }
+    .header-switch.header-hidden {
+      top: 16px;
+    }

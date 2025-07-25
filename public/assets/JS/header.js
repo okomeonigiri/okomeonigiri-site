@@ -12,7 +12,38 @@ async function importHeader() {
   html = await res.text();
   document.getElementById('header').innerHTML = html;
 }
-importHeader();
 
+const fileName = location.pathname.split('/').pop();
+if (fileName !== 'header.html') {
+  importHeader();
+}
+
+let isHeader = 1;
+
+function switchHeader(){
+  if(isHeader){
+    hideHeader();
+  }else{
+    showHeader();
+  }
+}
+
+function hideHeader(){
+  document.getElementById('header').style.display='none';
+  document.querySelector('.header-switch').style.display='block';
+  const btn = document.querySelector('.header-switch');
+  btn.classList.remove('header-visible');
+  btn.classList.add('header-hidden');
+  isHeader = 0;
+}
+
+function showHeader(){
+  document.getElementById('header').style.display='block';
+  document.querySelector('.header-switch').style.display='block';
+  const btn = document.querySelector('.header-switch');
+  btn.classList.remove('header-hidden');
+  btn.classList.add('header-visible');
+  isHeader = 1;
+}
 // この関数を呼び出すことで、header.htmlの内容がページに挿入されます。
 // 注意: <div id="header"></div> がHTML内に存在する必要があります。

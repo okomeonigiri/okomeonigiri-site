@@ -6,7 +6,7 @@ function scrollToTop() {
     });
 }
 
-let isShowed = false; // 一回でも表示されたか
+let isShowed = 0; // 一回でも表示されたか
 let isSTB = 0; // スイッチの表示状態を管理
 
 function showScrollTopBtn(){
@@ -14,8 +14,8 @@ function showScrollTopBtn(){
     const scrollTopBtn = document.querySelector('.scroll-top-btn');
     if (scrollTopBtn) {
         if(!isShowed){
-        isShowed = 1;
         scrollTopBtn.classList.remove('scroll-top-btn-hide-first');
+        scrollTopBtn.classList.remove('scroll-top-btn-hide');
         }
         else {
         scrollTopBtn.classList.remove('scroll-top-btn-hide');
@@ -28,13 +28,12 @@ function showSTBswitch(){
     const switchSTB = document.querySelector('.switch-STB');
     if (switchSTB) {
         if(!isShowed){
-        isShowed = 1;
-        switchSTB.classList.add('switch-STB-180');
         switchSTB.classList.remove('switch-STB-hide-first');
+        switchSTB.classList.remove('switch-STB-hide');
         }
         else {
         switchSTB.classList.remove('switch-STB-hide');
-    }
+        }
         if(!switchSTB.classList.contains('switch-STB-transition')){
             switchSTB.classList.add('switch-STB-transition');
         }
@@ -113,6 +112,9 @@ window.addEventListener('scroll', function() {
             showScrollTopBtn();
             showSTBswitch();
             hasShownInSession = true;
+            if (isShowed !== 1) {
+                isShowed = 1; // 一度でも表示されたことを記録
+            }
         }
     } else {
         hideScrollTopBtn();

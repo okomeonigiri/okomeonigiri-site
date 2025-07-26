@@ -1,0 +1,65 @@
+/* トップへ戻るボタン用CSS */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  width:70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #bcd0ff;
+  border: 2px solid #fff;
+}
+.switch-STB {
+  position: fixed;
+  bottom: 5px;
+  right: 28px;
+  padding: 2px 20px 2px 20px;
+  background-color: #bcd0ff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border: 2px solid #fff;
+}
+.scroll-top-btn-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: transform 0.3s, opacity 0.2s, visibility 0.2s;
+}
+.scroll-top-btn-hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(120%);
+  transition: transform 0.3s, opacity 0.2s, visibility 0.2s;
+}
+.scroll-top-btn-hide-first {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(120%);
+}
+.switch-STB-hide-first {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(120%) rotate(0deg);
+}
+.switch-STB-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.switch-STB-hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(120%);
+}
+.switch-STB-0 {
+  transform: rotate(0deg);
+}
+.switch-STB-180 {
+  transform: rotate(180deg);
+}
+
+.switch-STB-transition {
+  transition: transform 0.3s, opacity 0.2s, visibility 0.2s;
+}

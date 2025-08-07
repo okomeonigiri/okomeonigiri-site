@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/assets/css/okomeonigiri-main.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/youtubeViewer.css">
+  <style>
+
+  </style>
   <script src="/assets/JS/header.js" defer></script>
   <script src="/assets/JS/youtubeViewer.js" defer></script>
+  <script async src="https://cse.google.com/cse.js?cx=106283286a9db4c58"></script>
   <title>youtubeViewer | okome onigiriのサイト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -13,15 +18,18 @@
   <div id="header"></div>
   <main>
     <section id="youtubeViewer">
-      <h2 style="text-align: center;">YouTube Viewer</h2>
       <br>
       <div class="youtube-container">
         <div class="youtube-frame" style="text-align: center;">
           <iframe id="youtube-iframe" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="10" allowfullscreen></iframe>
         </div>
       </div>
-      <script async src="https://cse.google.com/cse.js?cx=106283286a9db4c58"></script>
-<div class="gcse-search"></div>
+      <div class="search-container" style="text-align: center;">
+        <h3>YouTube Viewer</h3>
+        <p>キーワードを入力して動画を検索できます。</p>
+        <div class="gcse-searchbox"></div>
+        <div class="gcse-searchresults"></div>
+      </div>
     </section>
   </main>
   <footer class="site-footer">

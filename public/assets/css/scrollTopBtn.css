@@ -9,6 +9,7 @@
   background: #bcd0ff;
   border: 2px solid #fff;
 }
+
 .switch-STB {
   position: fixed;
   bottom: 5px;
@@ -21,6 +22,7 @@
   font-size: 0.9rem;
   border: 2px solid #fff;
 }
+
 .scroll-top-btn-visible {
   opacity: 1;
   visibility: visible;
@@ -38,6 +40,7 @@
   visibility: hidden;
   transform: translateY(120%);
 }
+
 .switch-STB-hide-first {
   opacity: 0;
   visibility: hidden;

@@ -1,3 +1,6 @@
+let isShowed = 0; // 一回でも表示されたか
+let isSTB = 0; // スイッチの表示状態を管理
+let hasShownInSession = false;
 
 function scrollToTop() {
     window.scrollTo({
@@ -6,41 +9,19 @@ function scrollToTop() {
     });
 }
 
-let isShowed = 0; // 一回でも表示されたか
-let isSTB = 0; // スイッチの表示状態を管理
-
 function showScrollTopBtn(){
     isSTB = 1; // スイッチが表示されている状態にする
     const scrollTopBtn = document.querySelector('.scroll-top-btn');
     if (scrollTopBtn) {
         if(!isShowed){
-        scrollTopBtn.classList.remove('scroll-top-btn-hide-first');
-        scrollTopBtn.classList.remove('scroll-top-btn-hide');
+            scrollTopBtn.classList.remove('scroll-top-btn-hide-first');
+            scrollTopBtn.classList.remove('scroll-top-btn-hide');
+        } else {
+            scrollTopBtn.classList.remove('scroll-top-btn-hide');
         }
-        else {
-        scrollTopBtn.classList.remove('scroll-top-btn-hide');
-    }
         scrollTopBtn.classList.add('scroll-top-btn-visible');
     }
 }
-
-function showSTBswitch(){
-    const switchSTB = document.querySelector('.switch-STB');
-    if (switchSTB) {
-        if(!isShowed){
-        switchSTB.classList.remove('switch-STB-hide-first');
-        switchSTB.classList.remove('switch-STB-hide');
-        }
-        else {
-        switchSTB.classList.remove('switch-STB-hide');
-        }
-        if(!switchSTB.classList.contains('switch-STB-transition')){
-            switchSTB.classList.add('switch-STB-transition');
-        }
-        switchSTB.classList.add('switch-STB-show');
-    }
-}
-
 
 function hideScrollTopBtn(){
     isSTB = 0; // スイッチが非表示の状態にする
@@ -50,6 +31,23 @@ function hideScrollTopBtn(){
         scrollTopBtn.classList.add('scroll-top-btn-hide');
     }
 }
+
+function showSTBswitch(){
+    const switchSTB = document.querySelector('.switch-STB');
+    if (switchSTB) {
+        if(!isShowed){
+            switchSTB.classList.remove('switch-STB-hide-first');
+            switchSTB.classList.remove('switch-STB-hide');
+        } else {
+            switchSTB.classList.remove('switch-STB-hide');
+        }
+        if(!switchSTB.classList.contains('switch-STB-transition')){
+            switchSTB.classList.add('switch-STB-transition');
+        }
+        switchSTB.classList.add('switch-STB-show');
+    }
+}
+
 function hideSTBswitch(){
     const switchSTB = document.querySelector('.switch-STB');
     if (switchSTB) {
@@ -103,8 +101,6 @@ function switchSTB0() {
         switchSTB.classList.add('switch-STB-0');
     }
 }
-
-let hasShownInSession = false;
 
 window.addEventListener('scroll', function() {
     if (window.scrollY > 100) {

@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="assets/css/okomeonigiri-main.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <script src="assets/JS/header.js" defer></script>
+  <script src="assets/JS/home.js" defer></script>
   <title>okome onigiriのサイト</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -17,6 +18,36 @@
       width: 100%;
       height: 100px;
       background: #535353;
+    }
+    .service-list {
+      background-color: antiquewhite;
+      border-radius: 0 0 20px 20px;
+      display: flex;
+      width: 100%;
+      height: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+      box-sizing: border-box;
+      gap: 20px;
+    }
+    .service-list .article-preview {
+      min-width: 200px;
+      flex-shrink: 0;
+      margin-top: 10px;
+    }
+    .service-list-btn {
+      background: #bcd0ff;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      padding: 6px 18px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0 4px;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .service-list-btn:hover {
+      background: #a0b8e6;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
   </style>
 </head>
@@ -43,6 +74,31 @@
         <p>このサイトで初めての記事</p>
       </a>
     </div>
+        <section id="services">
+      <div class="service-list">
+        <div class="article-preview">
+          <a href="webapp/webapp.html">
+            <img src="assets/images/okomeonigiri_first.jpg" alt="記事サムネイル" class="preview-thumb">
+            <h3>web アプリ</h3>
+            <p>作りたいものを適当に作っています</p>
+          </a>
+        </div>
+        <div class="article-preview" style="margin-left: 20px;">
+          <a href="pages/blog.html">
+            <img src="assets/images/okomeonigiri_first.jpg" alt="記事サムネイル" class="preview-thumb">
+            <h3>okomeonigiri`s Blog</h3>
+            <p>たまに書きます</p>
+          </a>
+        </div>
+        <div class="article-preview" style="margin-left: 20px;">
+          <a href="pages/content/RCJJ_1.html">
+            <img src="assets/images/okomeonigiri_first.jpg" alt="記事サムネイル" class="preview-thumb">
+            <h3>okomeonigiri`s minecraft SMP</h3>
+            <p>うちのSMP鯖です</p>
+          </a>
+        </div>
+    </div>
+    </section>
   </main>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="site-footer">

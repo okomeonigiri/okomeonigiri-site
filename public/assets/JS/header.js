@@ -50,29 +50,3 @@ const fileName = location.pathname.split('/').pop();
 if (fileName !== 'header.html') {
   importHeader();
 }
-
-function switchHeader(){
-  const headerDiv = document.querySelector('.header');
-  const headerSwitchButton = document.querySelector('.header-switch');
-  const headerTag = document.querySelector('header');
-  if(isHeader){
-    headerDiv.classList.add('hide');
-    headerSwitchButton.textContent = 'ヘッダーを表示';
-    if(headerTag){
-      headerTag.classList.remove('visible-header');
-      headerTag.classList.add('hide-header');
-    }
-    document.body.style.paddingTop = '0px';
-    isHeader = 0;
-  }else{
-    headerDiv.classList.remove('hide');
-    headerSwitchButton.textContent = 'ヘッダーを非表示';
-    if(headerTag){
-      headerTag.classList.remove('hide-header');
-      headerTag.classList.add('visible-header');
-    }
-    document.body.style.paddingTop = '200px';
-    isHeader = 1;
-  }
-}
-// style.displayでヘッダー表示/非表示を切り替える形式

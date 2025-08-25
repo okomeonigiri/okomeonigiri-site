@@ -16,27 +16,39 @@ function updateIframe(videoId) {
     }
 }
 
-window.addEventListener('load', function(){
-    const targetNode = document.querySelector('.gcse-searchresults');
+function addYoutubeSearchResultListeners() {
+    const targetNode = document.querySelector('.gsc-resultsbox-visible');
+    if (!targetNode) return;
 
-    const observer = new MutationObserver(function(mutationsList,observer){
-        const links = document.querySelectorAll('.gs-title');
-
-        links.forEach(function(link){
-            link.addEventListener('click',function(event){
-                console.log('Link clicked:', link);
-                event.preventDefault();
-
-                const url= link.getAttribute('data-ctorig')||link.href;
-
-                console.log( 'Clicked link:', url);
-            })
-        })
-    })
-
-    const config ={childList: true, subtree: true};
-    if(targetNode){
-        observer.observe(targetNode,config)
+    function attachListeners() {
+        const titles = document.querySelectorAll('.gsc-webResult.gsc-result');
+        console.log('Found titles:', titles, titles.length);
+        titles.forEach(function(title) {
+            const link = title.querySelector('.gs-title a');
+            if (link && !link.dataset.listenerAdded) {
+                link.dataset.listenerAdded = 'true';
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const url = link.href;
+                    const decodedUrl = decodeURIComponent(url);
+                    console.log('Clicked link:', decodedUrl.match(/v=([^&]+)/));
+                    const match = decodedUrl.match(/v=([^&]+)/);
+                    if (match) {
+                        updateIframe(match[1]);
+                    }
+                });
+            }
+        });
     }
-});
+
+    // 最初にも実行
+    attachListeners();
+
+    // 検索結果が変化したときにも実行
+    const observer = new MutationObserver(attachListeners);
+    observer.observe(targetNode, { childList: true, subtree: true });
+}
+
+window.addEventListener('load', addYoutubeSearchResultListeners);
+addYoutubeSearchResultListeners();
 

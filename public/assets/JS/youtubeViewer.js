@@ -5,7 +5,7 @@ function setup(){
     main.style.margin = "0";
     main.style.padding = "0";
     const iframe = document.querySelector("#youtube-iframe");
-    iframe.src="https://www.youtube-nocookie.com/embed/VIDEO_ID";
+    iframe.src="";
 }
 setup();
 

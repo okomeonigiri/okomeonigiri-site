@@ -12,13 +12,15 @@
 .youtube-container {
   display: flex;
   justify-content: center;
-  margin: 0 10;
+  margin: 0 5 0 10;
 }
 
 .search-container {
       margin: 0;
       max-width: 40vw;
       width: 100%;
+      max-height: 90vw;
+      overflow-y: scroll;
     }
     .gcse-searchbox, .gcse-searchresults {
       display: block;

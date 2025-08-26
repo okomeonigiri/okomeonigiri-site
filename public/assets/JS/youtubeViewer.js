@@ -52,3 +52,8 @@ function addYoutubeSearchResultListeners() {
 window.addEventListener('load', addYoutubeSearchResultListeners);
 addYoutubeSearchResultListeners();
 
+window.onload = function() {
+    setInterval(function() {
+        addYoutubeSearchResultListeners();
+    }, 100);
+};

@@ -1,4 +1,4 @@
-function setup(){
+function YTV_setup(){
     const main = document.querySelector("main");
     main.style.maxWidth = "100%";
     main.style.width = "100%";
@@ -7,7 +7,8 @@ function setup(){
     const iframe = document.querySelector("#youtube-iframe");
     iframe.src="";
 }
-setup();
+
+YTV_setup();
 
 function updateIframe(videoId) {
     const iframe = document.querySelector("#youtube-iframe");

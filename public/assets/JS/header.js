@@ -16,7 +16,7 @@ async function importHeader() {
     document.getElementById('header').style.display = 'block';
     importScrollTopBtn();
 }
-// トップへ戻るボタンのインポート仮関数
+
 async function importScrollTopBtn() {
     let btnHTML = '';
     let res = await fetch('/components/scrollTopBtn.html');
@@ -52,11 +52,25 @@ if (fileName !== 'header.html') {
 }
 
 function switchHeader(){
+  if(isHeader){
+    hideHeader();
+  }else{
+    showHeader();
+  }
+}
+
+function hidenav(){
+  const headernav = document.querySelector('nav');
+  if (headernav) {
+    headernav.classList.add('hide');
+  }
+}
+
+function hideHeader(){
   const headerDiv = document.querySelector('.header');
   const headerSwitchButton = document.querySelector('.header-switch');
   const headerTag = document.querySelector('header');
-  if(isHeader){
-    headerDiv.classList.add('hide');
+  headerDiv.classList.add('hide');
     headerSwitchButton.textContent = 'ヘッダーを表示';
     if(headerTag){
       headerTag.classList.remove('visible-header');
@@ -64,8 +78,13 @@ function switchHeader(){
     }
     document.body.style.paddingTop = '0px';
     isHeader = 0;
-  }else{
-    headerDiv.classList.remove('hide');
+}
+
+function showHeader(){
+  const headerDiv = document.querySelector('.header');
+  const headerSwitchButton = document.querySelector('.header-switch');
+  const headerTag = document.querySelector('header');
+  headerDiv.classList.remove('hide');
     headerSwitchButton.textContent = 'ヘッダーを非表示';
     if(headerTag){
       headerTag.classList.remove('hide-header');
@@ -73,6 +92,4 @@ function switchHeader(){
     }
     document.body.style.paddingTop = '200px';
     isHeader = 1;
-  }
 }
-// style.displayでヘッダー表示/非表示を切り替える形式

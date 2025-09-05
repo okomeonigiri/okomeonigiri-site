@@ -4,7 +4,7 @@ body {
     font-family: 'Segoe UI', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
     background: #fafafa;
     color: #222;
-    padding-top: 200px; /* headerの高さに合わせて調整 */
+    padding-top: 150px; /* headerの高さに合わせて調整 */
 }
 main {
     max-width: 1000px;

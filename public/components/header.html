@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="/assets/css/header.css">
-<link rel="stylesheet" href="/assets/css/useful.css">
-<script src="/assets/JS/header.js" defer></script>
 <header>
   <div class="header">
     <div class="header-content">
@@ -17,13 +15,13 @@
         <li><a href="/contact.html">contact</a></li>
       </ul>
       <div class="select-page">
-        <div>ページ移動</div>
+        <span>ページ移動</span>
         <select id="header-select">
           <option></option>
           <option value="/minecraft/okomeonigiri_server.html">Minecraftサーバー</option>
-          <option value="webapp/webapp.html">Webアプリ</option>
+          <option value="/webapp/webapp.html">Webアプリ</option>
         </select>
-        <button onclick="location.href=document.getElementById('header-select').value">移動</button>
+        <btn onclick="location.href=document.getElementById('header-select').value">移動</button>
       </div>
     </nav>
   <button class="header-switch" onclick="switchHeader()">ヘッダーを非表示</button>

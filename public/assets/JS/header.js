@@ -1,4 +1,5 @@
 let isHeader = 1;
+let header = document.getElementById('header');
 
 async function importHeader() {
     let headerHTML = '';
@@ -7,13 +8,13 @@ async function importHeader() {
         res = await fetch('/public/components/header.html');
         if (!res.ok) {
             headerHTML = '<p style="color:red;">ヘッダーの読み込みに失敗しました。</p>';
-            document.getElementById('header').innerHTML = headerHTML;
+            header.innerHTML = headerHTML;
             return;
         }
     }
     headerHTML = await res.text();
-    document.getElementById('header').innerHTML = headerHTML;
-    document.getElementById('header').style.display = 'block';
+    header.innerHTML = headerHTML;
+    header.style.display = 'block';
     importScrollTopBtn();
 }
 
@@ -67,6 +68,7 @@ function hidenav(){
 }
 
 function hideHeader(){
+  const hideBTN = document.querySelector('.header-switch');
   const headerDiv = document.querySelector('.header');
   const headerSwitchButton = document.querySelector('.header-switch');
   const headerTag = document.querySelector('header');
@@ -77,11 +79,13 @@ function hideHeader(){
       headerTag.classList.add('hide-header');
     }
     document.body.style.paddingTop = '0px';
+    hideBTN.style.paddingTop  = '10px';
     isHeader = 0;
 }
 
 function showHeader(){
   const headerDiv = document.querySelector('.header');
+  const hideBTN = document.querySelector('.header-switch');
   const headerSwitchButton = document.querySelector('.header-switch');
   const headerTag = document.querySelector('header');
   headerDiv.classList.remove('hide');
@@ -90,6 +94,7 @@ function showHeader(){
       headerTag.classList.remove('hide-header');
       headerTag.classList.add('visible-header');
     }
-    document.body.style.paddingTop = '200px';
+    document.body.style.paddingTop = '120px';
+    hideBTN.style.paddingTop  = '30px';
     isHeader = 1;
 }

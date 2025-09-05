@@ -25,8 +25,8 @@
       margin: 0;
       max-width: 40vw;
       width: 100%;
-      max-height: 90vw;
-      overflow-y: scroll;
+      /* max-height: 90vw;
+      overflow-y: scroll; */
     }
     .gcse-searchbox, .gcse-searchresults {
       display: block;

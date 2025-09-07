@@ -1,14 +1,19 @@
+
 .youtube-frame {
-  width: 50vw;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 800px;
   aspect-ratio: 16/9;
-  margin: 0px 10px 0 0;
+  position: relative;
 }
-.youtube-frame iframe {
+
+#youtube-iframe {
   width: 100%;
   aspect-ratio: 16/9;
+  height: auto;
+  min-height: 200px;
   border: none;
-  background-color: #39c5bb50;
+  background: #000;
+  display: block;
 }
 
 .youtube-container {

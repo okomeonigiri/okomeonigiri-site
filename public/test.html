@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube IFrame API サンプル</title>
+  <script src="/assets/JS/localAPI/YTiframe_api_local.js"></script>
+</head>
+<body>
+  <div>
+    <div id="player"></div>
+    <input id="videoIdInput" type="text" placeholder="YouTube動画ID">
+    <button onclick="playVideo()">再生</button>
+    <p>まだ</p>
+  </div>
+  <script>
+    let player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: '',
+        host: 'https://www.youtube-nocookie.com',
+        events: {
+        onStateChange: onPlayerStateChange
+      }
+      });
+    }
+    function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+      alert('動画が終了しました');
+      document.querySelector('p').textContent = '動画が終了しました';
+    }
+  }
+    function playVideo() {
+      const id = document.getElementById('videoIdInput').value.trim();
+      if (id && player) player.loadVideoById(id);
+    }
+  </script>
+</body>
+</html>

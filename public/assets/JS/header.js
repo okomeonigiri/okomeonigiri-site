@@ -16,6 +16,13 @@ async function importHeader() {
     header.innerHTML = headerHTML;
     header.style.display = 'block';
     importScrollTopBtn();
+    const wasHidden =localStorage.getItem('header_hide?');
+    if(wasHidden === 'true'){
+      hideHeader();
+    } else if(wasHidden =='null'){
+      wasHidden = 'false';
+    }
+    
 }
 
 async function importScrollTopBtn() {
@@ -68,6 +75,7 @@ function hidenav(){
 }
 
 function hideHeader(){
+  localStorage.setItem('header_hide?', 'true');
   const hideBTN = document.querySelector('.header-switch');
   const headerDiv = document.querySelector('.header');
   const headerSwitchButton = document.querySelector('.header-switch');
@@ -84,6 +92,7 @@ function hideHeader(){
 }
 
 function showHeader(){
+  localStorage.setItem('header_hide?', 'false');
   const headerDiv = document.querySelector('.header');
   const hideBTN = document.querySelector('.header-switch');
   const headerSwitchButton = document.querySelector('.header-switch');

@@ -50,21 +50,21 @@ function updateIframe(videoId) {
 }
 
 function loadViewHistory(){
-    // try {
-    //     const data = localStorage.getItem('yt_history');
-    //     viewHistory = data ? JSON.parse(data) : [];
-    // } catch {
-    //     viewHistory= [];
-    // }
+    try {
+        const data = localStorage.getItem('yt_history');
+        viewHistory = data ? JSON.parse(data) : [];
+    } catch {
+        viewHistory = [];
+    }
 }
 function saveViewHistory(){
-    // localStorage.setItem('yt_history', JSON.stringify(viewHistory));
+    localStorage.setItem('yt_history', JSON.stringify(viewHistory));
 }
 function addViewHistory(id, date){
-    // viewHistory.unshift([id, date]);
-    // // 必要なら最大件数制限（例：9000件）
-    // if (viewHistory.length > 9000) viewHistory = viewHistory.slice(0, 15000);
-    // saveViewHistory();
+    viewHistory.unshift([id, date]);
+    // 必要なら最大件数制限（例：9000件）
+    if (viewHistory.length > 9000) viewHistory = viewHistory.slice(0, 9000);
+    saveViewHistory();
 }
 
 function addYoutubeSearchResultListeners() {

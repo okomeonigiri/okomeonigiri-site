@@ -347,4 +347,8 @@ window.onload = function () {
     }, 100);
 };
 
+if(localStorage.getItem('infoBoxHidden') === 'true'){
+    document.querySelector('.info-box').style.display='none';
+}
+
 genelateFavorite();

@@ -26,7 +26,10 @@
   <div id="header"></div>
   <main>
     <div class="info-box">
-      <h3>💡ヒント:表示順を Relevaranceからdateにすることで最新動画を検索できます</h3>
+      <h2>youtubeViewer (β2.0)</h2>
+      <h3>仮実装：気力が尽きたのでお気に入りだけです。<br>見た目も悪いと思います　ごめんなさい</h3>
+      <h3>💡ヒント:表示順を Relevaranceからdateにすることで最新動画を検索できます<br>　　 　　:下の[隠す]ボタンでこの文章を消すことができます</h3>
+      <h3><button onclick="if(confirm('本当に隠しますか？')){document.querySelector('.info-box').style.display='none';localStorage.setItem('infoBoxHidden', 'true');}">隠す</button></h3>
     </div>
       <section id="youtubeViewer">
         <div class="youtube-main-flex">

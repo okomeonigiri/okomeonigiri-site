@@ -2,38 +2,47 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>YouTube IFrame API サンプル</title>
-  <script src="/assets/JS/localAPI/YTiframe_api_local.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=92d128fbda9544ac7">
+</script>
 </head>
 <body>
-  <div>
-    <div id="player"></div>
-    <input id="videoIdInput" type="text" placeholder="YouTube動画ID">
-    <button onclick="playVideo()">再生</button>
-    <p>まだ</p>
+  <button onclick="load()">syutoku</button>
+  <div class="search-container">
+    <h2>YouTube Viewer</h2>
+    <h4>by okome onigiri</h4>
+    <p>キーワードを入力して動画を検索できます。</p>
+    <div class="gcse-searchbox"></div>
+    <div class="gcse-searchresults"></div>
   </div>
+  <div id="img-area"></div>
   <script>
-    let player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '360',
-        width: '640',
-        videoId: '',
-        host: 'https://www.youtube-nocookie.com',
-        events: {
-        onStateChange: onPlayerStateChange
-      }
-      });
+    // CSE検索ボックス・検索結果を常時非表示にする
+    function hideCSE() {
+      const style = document.createElement('style');
+      style.textContent = `
+        .gcse-searchbox, .gcse-searchresults { display: none !important; }
+      `;
+      document.head.appendChild(style);
     }
-    function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-      alert('動画が終了しました');
-      document.querySelector('p').textContent = '動画が終了しました';
-    }
-  }
-    function playVideo() {
-      const id = document.getElementById('videoIdInput').value.trim();
-      if (id && player) player.loadVideoById(id);
+    hideCSE();
+
+    function loadImgByCSE(VID){
+      const textbox = document.querySelector('.gsc-input-box input');
+      textbox.value = VID;
+      const search_btn = document.querySelector('.gsc-search-button button');
+      search_btn.click();
+      setTimeout(() => {
+        const all = document.querySelectorAll('.gsc-webResult .gsc-result');
+        const first = all[0];
+        if (first) {
+          let img = first.querySelector('.gs-image');
+          if (img) {
+            const area = document.getElementById('img-area');
+            area.innerHTML = '';
+            area.appendChild(img.cloneNode(true));
+          }
+        }
+      }, 1000);
     }
   </script>
 </body>

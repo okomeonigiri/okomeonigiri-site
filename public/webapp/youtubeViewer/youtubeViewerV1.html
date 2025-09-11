@@ -5,6 +5,15 @@
   <link rel="stylesheet" href="/assets/css/youtubeViewer.css">
   <script src="/assets/JS/youtubeViewer.js" defer></script>
   <script src="/assets/JS/localAPI/YTiframe_api_local.js"></script>
+  <script>
+  window.__gcse = {
+    callback: function() {
+      // ここでCSEのDOM操作や初期化が安全にできる
+      console.log('CSE loaded!');
+      // 例: addYoutubeSearchResultListeners();
+    }
+  };
+</script>
   <style>
   </style>
   <script src="/assets/JS/main.js" defer></script>
@@ -16,29 +25,50 @@
 <body>
   <div id="header"></div>
   <main>
-    <section id="youtubeViewer">
-      <br>
-      <div class="youtube-container">
-        <div class="youtube-frame" style="text-align: center;">
-          <div id="youtube-iframe" style="text-align: center;aspect-ratio: 16/9;width: 100%;"></div>
-          <!-- <iframe id="youtube-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-          <div class="playlist">
-            <div class="playlist-item">
-              <div class="playlist-num"></div>
+    <div class="info-box">
+      <h3>💡ヒント:表示順を Relevaranceからdateにすることで最新動画を検索できます</h3>
+    </div>
+      <section id="youtubeViewer">
+        <div class="youtube-main-flex">
+          <!-- 左側：動画＋履歴（縦並び） -->
+          <div class="youtube-left">
+            <div class="youtube-frame">
+              <div id="youtube-iframe"></div>
             </div>
+            <!-- <div class="history">
+              <h2>視聴履歴（β 配列のみ）</h2>
+              <div id="history-view"></div>
+            </div> -->
+            <div class="options">
+              <div class="option-item">
+                <input type="checkbox" id="loop" onclick="toggleLoop()">
+                <label for="loop">ループ再生</label>
+              </div>
+              <div class="option-item">
+                <input type="checkbox" id="mute" onclick="toggleMute()">
+                <label for="mute">ミュート</label>
+              </div>
+            </div>
+              <div class="select">
+                お気に入りへ追加
+                <span>
+                <input><button onclick="addb()">追加</button>
+                </span>
+              </div>
+              <div class="content"></div>
           </div>
+          <!-- 右側：検索 -->
+          <div class="search-container">
+            <h2>YouTube Viewer</h2>
+            <h4>by okome onigiri</h4>
+            <p>キーワードを入力して動画を検索できます。</p>
+            <div class="gcse-searchbox"></div>
+            <div class="gcse-searchresults"></div>
+          </div>
+          <div class="ex-SC"></div>
         </div>
-        <div class="search-container" style="text-align: center;">
-        <h2>YouTube Viewer</h2>
-        <h4>by okome onigiri</h4>
-        <p>キーワードを入力して動画を検索できます。</p>
-        <div class="gcse-searchbox"></div>
-        <div class="gcse-searchresults"></div>
-      </div>
-    </section>
-      </div>
-    <br>
-  </main>
+      </section>
+    </main>
   <footer class="site-footer">
     <div class="under-box">
       <br>

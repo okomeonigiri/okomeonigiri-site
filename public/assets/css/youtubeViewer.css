@@ -1,9 +1,104 @@
+.youtube-main-flex {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.youtube-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  max-width: 800px;
+  min-width: 320px;
+}
 
 .youtube-frame {
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16/9;
   position: relative;
+  display: block;
+}
+
+.history {
+  width: 100%;
+  margin-top: 1em;
+  text-align: center;
+}
+.favorite-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 5px 1em;
+  padding: 2px;
+  background-color: #b5fffad0;
+  border-radius: 10px;
+}
+.options{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  max-width: 400px;
+  min-width: 250px;
+  gap: 5px;
+  background-color: #39c5bc2f;
+  border-radius: 10px;
+}
+.content button {
+  background-color: #ffffff69;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 3px 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+.option-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 1px 2px;
+  padding: 2px;
+  background-color: #39c5bc2f;
+  border-radius: 10px;
+}
+
+.option-item label {
+  display: inline-block;
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
+
+.search-container {
+  max-width: 400px;
+  min-width: 250px;
+  width: 100%;
+  margin-left: 2em;
+  text-align: center;
+}
+
+.ex-SC {
+  max-width: 400px;
+  min-width: 250px;
+  width: 100%;
+  margin-left: 2em;
+  text-align: center;
+  display:none;
 }
 
 #youtube-iframe {
@@ -18,7 +113,8 @@
 
 .youtube-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0 5 0 10;
 }
 .reload-button {
